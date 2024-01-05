@@ -1,0 +1,23 @@
+.degradado {
+    background: linear-gradient(145deg, #f538a5 0, #fb3395 8.33%, #fe3184 16.67%, #ff3274 25%, #ff3765 33.33%, #fd3e55 41.67%, #f94646 50%, #f34f37 58.33%, #ec5827 66.67%, #e46013 75%, #da6900 83.33%, #d07000 91.67%, #c47800 100%);
+    border: none;
+  }
+.sub{
+  color: #f538a5;
+}
+
+.center {
+  border:none;
+  border-radius: 0px;
+  border-bottom:2px solid  #f538a5;
+  display: block;
+}
+
+
+.chartDiv table{    font-size:12px; border-collapse: collapse;}
+.chartDiv table td{
+    border:1px solid black;
+    padding:5px;
+    text-align:center
+}
+.chartDiv table tr:nth-child(2n) td{    background:white;}

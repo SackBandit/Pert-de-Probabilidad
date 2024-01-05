@@ -1,95 +1,44 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import React, { useContext, useEffect, useRef } from 'react';
+import styles from '../public/styles.module.css';
+import { Button } from 'primereact/button';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  //----------------| Lista de variables |----------------
+  const router=useRouter();
+ 
+  //---------------------------| Valor que regresara |---------------------------
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+    
+  
+    <div className="grid grid-nogutter surface-0 text-800 mt-10">
+    <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+        <section>
+            <span className="block text-6xl font-bold mb-1">Pert Probabilistico</span>
+            <div className="text-2xl font-semibold mb-3 "><h3 className={`${styles.sub}`}>Modelos de Distribución de Probabilidad en PERT.</h3></div>
+            <p className="mt-0 mb-4 text-700 line-height-3">El PERT Probabilístico es una extensión del PERT clásico que incorpora la incertidumbre en las estimaciones de tiempo del proyecto. Utiliza distribuciones de probabilidad para modelar la variabilidad en las duraciones de las actividades, ofreciendo una visión más realista de los riesgos asociados con el cronograma del proyecto.</p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <Button label="Leer más" type="button" className="mr-3 p-button-raised "severity="secondary" />
+            <Button label="Probar" type="button" className="p-button-outlined" severity="secondary" onClick={() => {router.push('/calculadora')}}/>
+        </section>
+    </div>
+    <div className={`col-12 md:col-6 overflow-hidden p-8 ${styles.degradado}`} style={{ clipPath: 'polygon(20% 0, 100% 0, 100% 75%, 0 75%)',transform: 'scale(1)',height:"600px",backgroundColor:'white'} }>
+        <img src="/pert.png" className={`w-7 `} alt="pert" style={{ transform:'translateX(50%)'}}/>
+    </div>
+  </div>
+   
+   
+        <footer className='text-center'>
+        by
+            <span className="ml-2 text-center">ChimmyGuegos</span>
+           
+            
+            </footer>
+    
+    </>
+    
   )
 }
+
