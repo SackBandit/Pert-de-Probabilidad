@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chart.js": "^4.4.1",
     "ip": "^1.1.8",
     "jscharting": "^3.4.0",
     "next": "13.4.8",
